@@ -3,7 +3,7 @@ layout: post
 title: Posts & bio LinkedIn
 ---
 
-![Logo LinkedIn]({{site.baseurl}}/images/logo_linkedin.png) 
+![Logo LinkedIn]({{site.baseurl}}/images/logo_linkedin.png){width=100} 
 
 Il est possible d'améliorer grandement la visibilité et la compréhension d'un message présent dans les posts LinkedIn. Grâce aux émoticônes, et à la mise en forme classique de texte, désactivée pas défaut (gras, italique, souligné).
 
