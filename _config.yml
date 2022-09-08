@@ -85,4 +85,8 @@ exclude:
   - README.md
   - CNAME
 theme: minima
-lang: french
+lang: fr
+
+minima:
+  date_format: "%A %-d %B %Y"
+
