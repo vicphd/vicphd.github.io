@@ -9,3 +9,6 @@ Il est possible d'améliorer grandement la visibilité et la compréhension d'un
 
 * Liste d'émoticônes à copier-coller : [Waalaxy](https://blog.waalaxy.com/emoji-linkedin/)
 * Site de mise en forme de texte : [Yaytext](https://yaytext.com/fr/gras-italique/)
+
+![Waalaxy]({{site.baseurl}}/images/waalaxy.png){: width="300"} | ![Yaytext]({{site.baseurl}}/images/yaytext.png){: width="300"}
+
