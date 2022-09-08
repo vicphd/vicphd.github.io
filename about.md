@@ -1,15 +1,15 @@
 ---
 layout: page
-title: About
+title: à propos
 permalink: /about/
 ---
 
-The blog with a few how-to's
+l'objectif de ce blog est de partager des guides rapides sur différents outils.
 
-### More Information
+### plus d'informations
 
-A place to include any other types of information that you'd like to include about yourself.
+rien de spécial
 
-### Contact me
+### me contacter
 
-[email@domain.com](mailto:email@domain.com)
+[victorien.mamet@gmail.com](mailto:victorien.mamet@gmail.com)
