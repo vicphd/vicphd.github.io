@@ -84,7 +84,7 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
-theme: minima
+theme: time-machine
 lang: fr
 
 minima:
