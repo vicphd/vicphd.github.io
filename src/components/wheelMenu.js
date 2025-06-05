@@ -10,6 +10,9 @@ const topics = [
 ];
 
 export function createWheelMenu(container) {
+  const spinner = document.createElement('div');
+  spinner.className = 'spinner';
+
   const wheel = document.createElement('div');
   wheel.className = 'wheel';
 
@@ -27,5 +30,6 @@ export function createWheelMenu(container) {
     wheel.appendChild(item);
   });
 
-  container.appendChild(wheel);
+  spinner.appendChild(wheel);
+  container.appendChild(spinner);
 }
