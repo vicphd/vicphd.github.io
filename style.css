@@ -1,0 +1,12 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #eee;
+  margin: 0;
+  padding: 2rem;
+  text-align: center;
+}
+
+#wheel-menu {
+  margin-top: 2rem;
+}
