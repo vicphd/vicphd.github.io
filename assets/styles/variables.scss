@@ -1,0 +1,15 @@
+
+
+
+$themes: (
+  'light': (
+    'heading-color': #222222,
+    // keep other vars unchanged if you like
+  ),
+  'dark': (
+    'heading-color': #f1f5f9,
+  )
+);
+
+// Import original theme variables *after* to fill in anything missing
+@import "default/variables";

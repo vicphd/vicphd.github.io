@@ -18,17 +18,15 @@ languages:
 
 
 params:
+  background: "images/wallpaper.jpg"
   features:
-    # Enable portfolio section
     portfolio:
       enable: true
-
-    # Enable blog posts
     blog:
       enable: true
-
-    # Enable Table of contents in reading page
     toc:
+      enable: true
+    darkMode:
       enable: true
 # Configure footer
   footer:
