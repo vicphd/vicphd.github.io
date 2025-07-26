@@ -1,5 +1,8 @@
 baseURL: https://vicphd.github.io
-languageCode: en-us
+languageCode: fr
+defaultContentLanguage: fr
+
+
 title: Vic
 # Use Hugo modules to add theme
 module:
