@@ -1,5 +1,5 @@
 section:
-  name: Experiences # Titre de la section (par défaut: "" )
+  name: Expériences # Titre de la section (par défaut: "" )
   id: experiences # url id/slug of section *Required*
   enable: true
   weight: 3
@@ -10,28 +10,81 @@ section:
 # Your experiences
 experiences:
 - company:
-    name: Example Co.
-    url: "https://www.example.com"
-    location: Dhaka Branch
+    name: Lifeaz
+    url: "https://www.lifeaz.co"
+    location: Paris
     logo: /images/experiences/company.png
-    darkLogo: /images/experiences/company-dark.png #(optional), Can optionally show a different logo for dark theme
     # company overview
-    overview: Example Co. is a widely recognized company for cloud-native development. It builds tools for Kubernetes.
+    overview: Société de 40 personnes développant un défibrillateur connecté à destination des particuliers.
   positions:
-  - designation: Senior Software Engineer
-    start: Nov 2019
+  - designation: Ingénieur R&D
+    start: 2022
     # don't provide end date if you are currently working there. It will be replaced by "Present"
     # end: Dec 2020
     # give some points about what was your responsibilities at the company.
-    responsibilities:
-    - Design and develop XYZ tool for ABC task
-    - Design, develop and manage disaster recovery tool [Xtool](https://www.example.com) that backup Kubernetes volumes, databases, and cluster's resource definition.
-    - Lead backend team.
+    responsibilities: 
+    - Concevoir et développer des algorithmes de traitement pluridisciplinaires sur &#58;
 
-  - designation: Junior Software Engineer
-    start: Nov 2017
-    end: Oct 2019
-    responsibilities:
-    - Implement and test xyz feature for abc tool.
-    - Support client for abc tool.
-    - Learn k,d,w technology for xyz.
+      - des signaux ECG (détection de rythme cardiaque)
+
+      - des données géospatiales (localisation, déplacement)
+
+      - des données d'un parc d'appareils IoT
+
+    - Créer des modèles et simulateurs prédictifs énergétique pour la batterie (consommation de courant, niveau de batterie)
+    - Conduire un projet de recherche industrielle sur un bracelet connecté (TRL1 -> TRL5) pour lutter contre la mort subite du nourrisson.
+
+    - Déployer et maintenir des projets cloud (GCP - buckets, VM, app engine)
+    - Électronique &#58; métrologie, brasage, diagnostic de pannes.
+
+
+- company:
+    name: DBV Technologies
+    url: "https://dbv-technologies.com/fr/"
+    location: Bagneux
+    logo: /images/experiences/company.png
+    # company overview
+    overview: Société de biotechnologies de 250 personnes développant des patchs thérapeutiques anti-allergies alimentaires.
+  positions:
+  - designation: Ingénieur R&D
+    start: 2019
+    # don't provide end date if you are currently working there. It will be replaced by "Present"
+    end: 2021
+    # give some points about what was your responsibilities at the company.
+    responsibilities: 
+      - Concevoir et qualifier un logiciel pour vérifier l'étalonnage de débitmètres fluidiques. Gérer les différents aspects projet.
+      - Étudier d'un automate industriel de machine spéciale  &#58; faire l'analyse de risques, développer un simulateur électronique, rédiger des synthèses pour l'équipe opérationnelle. Encadrer un stagiaire L2.
+      - Traiter et analyser des données variées &#58; images de patchs, données de production et d'études des matériaux.
+
+
+  - designation: Ingénieur R&D junior
+    start: 2015
+    # don't provide end date if you are currently working there. It will be replaced by "Present"
+    end: 2018
+    # give some points about what was your responsibilities at the company.
+    responsibilities: 
+      - Étudier via la modélisation multiphysique et la simulation numérique un procédé de dépôt par spray, à l'aide de Comsol Multiphysics.
+      - Conduire un projet de recherche industrielle &#58; développer un prototype de modèle numérique, optimiser ce modèle, exécuter des expériences pour obtenir des résultats comparatifs, puis rédiger une synthèse.
+      - Encadrer un stagiaire M1 sur la partie expérimentale comparative.
+      - Publer les travaux dans le journal Physics of Fluids (09/2017), Publier et présenter à la conférence scientifique International Aerosol Conference 2018 (Saint Louis, Missouri)
+      - Participer aux doctoriales 2018 &#58; formation en gestion de projet, travail en équipe.
+    details: Le procédé alternatif de fabrication étudié a pu permettre de sprayer des patchs avec un rendement triplé par rapport au procédé initial. 
+
+
+- company:
+    name: Simtec
+    url: "https://www.simtecsolution.fr/fr/"
+    location: Grenoble
+    logo: /images/experiences/company.png
+    # company overview
+    overview: Société de conseil en modélisation de 10 personnes.
+  positions:
+  - designation: Assistant ingénieur 
+    start: 2014
+    # don't provide end date if you are currently working there. It will be replaced by "Present"
+    end: 2014
+    # give some points about what was your responsibilities at the company.
+    responsibilities: 
+      - Étudier l'environnement OpenFoam, logiciel de modélisation et simulation.
+      - Rédiger un manuel simplifié d'OpenFoam pour livrable.
+    details: Stage de M1 &#58; Étude critique d'un code de simulation numérique.
