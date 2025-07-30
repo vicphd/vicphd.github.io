@@ -1,0 +1,282 @@
+<div id="{{ .Get "id" }}" style="height: {{ .Get "height" | default "600px" }}"></div>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        #map {
+          height: 100vh;
+          width: 100vw;
+          position: relative;
+          overflow: hidden;
+        }
+
+/*        .center-cross {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 1000;
+          pointer-events: none;
+          width: 20px;
+          height: 20px;
+        }
+
+        .cross-line {
+          position: absolute;
+          background-color: white;
+        }
+
+        .cross-horizontal {
+          top: 50%;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          transform: translateY(-50%);
+        }
+
+        .cross-vertical {
+          top: 0;
+          left: 50%;
+          width: 2px;
+          height: 100%;
+          transform: translateX(-50%);
+        }*/
+
+
+        </style>
+     <!--    <div class="center-cross">
+          <div class="cross-line cross-horizontal"></div>
+          <div class="cross-line cross-vertical"></div>
+        </div> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+    <script>
+        // Global variables
+        // let map;
+
+        // Initialize map first
+        var map = L.map('{{ .Get "id" }}').setView([{{ .Get "lat" }}, {{ .Get "lng" }}], {{ .Get "zoom" | default "13" }});
+        
+        // Add tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+
+        const crossIcon = L.divIcon({
+          className: '', // no default styles
+          html: `
+            <svg width="20" height="20" viewBox="0 0 20 20">
+              <line x1="0" y1="10" x2="20" y2="10" stroke="green" stroke-width="3"/>
+              <line x1="10" y1="0" x2="10" y2="20" stroke="green" stroke-width="3"/>
+            </svg>
+          `,
+          iconSize: [20, 20],
+          iconAnchor: [10, 10] // center the icon on the coordinate
+        });
+
+
+
+        let locationData = []; // Declare globally
+
+        // Load the JSON data using fetch
+        fetch('/data/data_paris.json')
+          .then(response => {
+            if (!response.ok) {
+              throw new Error(`HTTP error: ${response.status}`);
+            }
+            return response.json();
+          })
+          .then(data => {
+            // console.log(data); // Log the data to check its structure
+
+            // Filter and process data with valid coordinates
+            locationData = data.filter(item =>
+              item.lat && item.lon &&
+              item.lat >= 48.7 && item.lat <= 49.0 &&
+              item.lon >= 2.2 && item.lon <= 2.5
+            );
+
+            console.log(`Loaded ${locationData.length} valid data points`);
+            
+            // Center map on first valid data point if available
+            if (locationData.length > 0) {
+                map.setView([48.86040527639665, 2.3413621712967085], 14);
+            }
+            
+            // Start spider map functionality
+            startSpiderMap();
+          })
+          .catch(error => {
+            console.error('Error loading JSON:', error);
+            alert('Error loading data.json. Please make sure the file exists and is accessible.');
+
+            startSpiderMap();
+
+          });
+
+
+
+
+
+        // // Load the JSON data
+        // $.getJSON('/data/data_paris.json', function(data) {
+        //     console.log(data); // Log the data to check its structure
+            
+        //     // Filter and process data with valid coordinates
+        //     locationData = [];
+        //     data.forEach(item => {
+        //         if (item.lat && item.lon) {
+        //             locationData.push(item);
+        //         }
+        //     });
+            
+        //     console.log(`Loaded ${locationData.length} valid data points`);
+            
+        //     // Center map on first valid data point if available
+        //     if (locationData.length > 0) {
+        //         map.setView([48.86040527639665, 2.3413621712967085], 14);
+        //     }
+            
+        //     // Start spider map functionality
+        //     startSpiderMap();
+            
+        // }).fail(function() {
+        //     console.error('Error loading data.json');
+        //     alert('Error loading data.json. Please make sure the file exists and is accessible.');
+            
+          
+            
+        //     startSpiderMap();
+        // });
+
+        // Function to start spider map functionality
+        function startSpiderMap() {
+            // Variables for spider map functionality
+            let spiderLines = [];
+            let activeMarkers = [];
+            let updateInterval;
+            console.log('startSpiderMap');
+
+            const center = map.getCenter();
+            const crossMarker = L.marker(center, { icon: crossIcon, interactive: false }).addTo(map);
+
+            // Function to calculate distance between two points
+            function calculateDistance(lat1, lon1, lat2, lon2) {
+                const R = 6371; // Earth's radius in km
+                const dLat = (lat2 - lat1) * Math.PI / 180;
+                const dLon = (lon2 - lon1) * Math.PI / 180;
+                const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+                          Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+                          Math.sin(dLon/2) * Math.sin(dLon/2);
+                const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+                return R * c;
+            }
+
+
+            // Function to find nearest 5 points to center
+            function findNearestPoints(centerLat, centerLon) {
+                const distances = [];
+                
+                locationData.forEach(item => {
+                    if (item.lat && item.lon) {
+                        const distance = calculateDistance(centerLat, centerLon, item.lat, item.lon);
+                        distances.push({
+                            ...item,
+                            distance: distance
+                        });
+                    }
+                });
+                // console.log(distances);
+                
+                return distances.sort((a, b) => a.distance - b.distance).slice(0, 5);
+            }
+
+            // Function to clear existing spider elements
+            function clearSpiderElements() {
+                spiderLines.forEach(line => map.removeLayer(line));
+                activeMarkers.forEach(marker => map.removeLayer(marker));
+                spiderLines = [];
+                activeMarkers = [];
+            }
+
+            // Function to update spider map
+            function updateSpiderMap() {
+                const center = map.getCenter();
+                const centerLat = center.lat;
+                const centerLon = center.lng;
+
+                crossMarker.setLatLng(map.getCenter());
+                // Clear existing elements
+                clearSpiderElements();
+
+                // Find nearest 5 points
+                const nearestPoints = findNearestPoints(centerLat, centerLon);
+                // console.log(nearestPoints);
+                // Create lines and markers for nearest points
+                nearestPoints.forEach(point => {
+                    // Create red line from center to point
+                    const line = L.polyline([
+                        [centerLat, centerLon],
+                        [point.lat, point.lon]
+                    ], {
+                        color: 'red',
+                        weight: 2,
+                        opacity: 0.8
+                    }).addTo(map);
+                    spiderLines.push(line);
+
+                    // Create blue dot marker for the point
+                    const marker = L.circleMarker([point.lat, point.lon], {
+                        color: 'blue',
+                        fillColor: 'blue',
+                        fillOpacity: 0.8,
+                        radius: 4
+                    }).addTo(map);
+
+                    
+                    // Add popup with point data
+                    const popupContent = Object.keys(point)
+                        .filter(key => key !== 'lat' && key !== 'lon' && key !== 'distance')
+                        .map(key => `${key}: ${point[key]}`)
+                        .join('<br>');
+                    marker.bindPopup(popupContent);
+                    
+                    activeMarkers.push(marker);
+                });
+                // console.log('updateSpiderMap');
+
+            }
+
+            // Initialize spider map
+            // console.log(locationData);
+            updateSpiderMap();
+
+            // Update spider map every 0.2 seconds
+            updateInterval = setInterval(updateSpiderMap, 200);
+
+            // Update spider map when map is moved
+            map.on('move', updateSpiderMap);
+            map.on('zoom', updateSpiderMap);
+
+            // Clean up interval when page is closed
+            window.addEventListener('beforeunload', () => {
+                if (updateInterval) {
+                    clearInterval(updateInterval);
+                }
+            });
+        }
+
+        // // Initialize everything when page loads
+        // $(document).ready(function() {
+        //     console.log('Page loaded, waiting for JSON data...');
+        // });
+    </script>
+</body>
+</html>

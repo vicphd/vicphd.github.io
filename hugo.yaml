@@ -3,7 +3,7 @@ languageCode: fr
 defaultContentLanguage: fr
 
 
-title: Vic
+title: VIEW (Vic Innovation Example Website)
 # Use Hugo modules to add theme
 module:
   imports:
@@ -30,9 +30,18 @@ params:
     toc:
       enable: true
     darkMode:
-      enable: true
+      enable: false
 # Configure footer
   footer:
     # enable: true
     newsletter:
       enable: false
+  logo:
+    main: images/logo.png
+    inverted: images/logo.png
+    favicon: images/logo.png
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
