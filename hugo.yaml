@@ -1,6 +1,6 @@
 baseURL: https://vicphd.github.io
-languageCode: fr
-defaultContentLanguage: fr
+languageCode: en
+defaultContentLanguage: en
 
 
 title: Vic
@@ -12,11 +12,11 @@ module:
 
 
 languages:
-  fr:
-    languageName: Français
-    weight: 1
   en:
     languageName: English
+    weight: 1
+  fr:
+    languageName: Français
     weight: 2
 
 

@@ -16,9 +16,9 @@ contactInfo:
   #   text: "ExampleUser"
 
 # a summary of what you do
-summary:
-- Je suis ingénieur
-# - Je fais de la physique
-- J'adore les maths
-- Je suis chercheur
-- J'aime apprendre
+# summary:
+# - Je suis ingénieur
+# # - Je fais de la physique
+# - J'adore les maths
+# - Je suis chercheur
+# - J'aime apprendre
