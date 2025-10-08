@@ -13,7 +13,7 @@ experiences:
     name: Lifeaz
     url: "https://www.lifeaz.co"
     location: Paris, FR
-    logo: /images/experiences/company.png
+    logo: images/experiences/lifeaz.png
     # company overview
     overview: Company of 40 people developing a connected AED for everybody.
   positions:
@@ -21,11 +21,15 @@ experiences:
     start: 2022
     responsibilities: 
     - Design and develop multidisciplinary processing algorithms for&#58;
+    
       - ECG signals (cardiac rhythm detection)
+
       - geospatial data (location, movement)
+
       - data from a fleet of IoT devices
 
-    - Create predictive energy models and simulators for batteries (power consumption, battery level)    - Conduire un projet de recherche industrielle sur un bracelet connecté (TRL1 -> TRL5) pour lutter contre la mort subite du nourrisson.
+
+    - Create predictive energy models and simulators for batteries (power consumption, battery level)    
     - Lead an industrial research project on a connected bracelet (TRL1 -> TRL5) to combat sudden infant death syndrome.
 
 
@@ -36,7 +40,7 @@ experiences:
     name: DBV Technologies
     url: "https://dbv-technologies.com/fr/"
     location: Bagneux, FR
-    logo: /images/experiences/company.png
+    logo: images/experiences/dbv.png
     # company overview
     overview: Biotechnology company with 250 employees developing therapeutic patches for food allergies.
   positions:
@@ -73,7 +77,7 @@ experiences:
     name: Simtec
     url: "https://www.simtecsolution.fr/fr/"
     location: Grenoble, FR
-    logo: /images/experiences/company.png
+    logo: images/experiences/simtec.png
     # company overview
     overview: Numerical modeling consulting company with 10 people.
   positions:

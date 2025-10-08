@@ -13,8 +13,7 @@ categories: ["dataviz"]
 hero: "/images/posts/spider_hero.png"
 ---
 
-Création d'une spidermap pour afficher les cinq éléments les plus proches d'un point sur la carte. 
-
+Creating a spidermap to display the five elements closest to a point on the map. 
 
 
 
@@ -23,10 +22,10 @@ Création d'une spidermap pour afficher les cinq éléments les plus proches d'u
 
 {{< spider id="spider" lat="48.8566" lng="2.3522" zoom="13" height="800px" >}}
 
-# Contexte
+# Background
 
 
 
-# Développement
+# Development
 
-Le coeur de la map 
+todo
