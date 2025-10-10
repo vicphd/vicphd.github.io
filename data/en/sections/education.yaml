@@ -11,30 +11,44 @@ section:
 
 
 degrees:
-- name: Ph.D in Quantum Cryptography
+- name: Ph.D in Physics
   icon: fa-microscope
-  timeframe: 2016-2020
+  timeframe: 2015-2018
   institution:
-    name: ABC University of Technology
+    name: UGA, Grenoble, FR
     url: "#"
-    logo: /images/education/college.png # Path of the logo image
-    darkLogo: /images/education/college-dark.png #(optional), Can optionally show a different logo for dark theme
-  grade: #(optional)
-    scale: CGPA
-    achieved: 3.6
-    outOf: 4
+    logo: images/education/uga.png # Path of the logo image
   publications: #(optional)
-  - title: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    url: "#"
-  - title: Fusce eu augue ut odio porttitor pulvinar.
-    url: "#"
-  - title: Nullam vitae orci tincidunt purus viverra pulvinar.
-    url: "#"
+  - title: Modeling of electro-flow focusing. (Manuscript, french)
+    url: "https://tel.archives-ouvertes.fr/tel-03231437"
+  - title: Numerical modeling of flow focusing - Quantitative characterization of the flow regimes
+    url: "https://doi.org/10.1063/1.5003840"
+  - title: Publication & oral communication at the International Aerosol Conference 2018 (St Louis, MI, USA)
   extracurricularActivities: #(optional), supports markdown
-  - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  - Fusce eu augue ut odio porttitor pulvinar.
-  custonSections: #(optional)
-    - name: Thesis
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    - name: Supervisor
-      content: Fusce eu augue ut odio porttitor pulvinar.
+  - Participation to the "Doctoriales" 2018&#58; training in project management, team building.
+  customSections: #(optional)
+  - name: Specializations
+    content: Fluid dynamics, numerical simulation and process engineering.
+
+- name: MSc. Eng. (Diplôme d’ingénieur)
+  icon: fa-computer
+  timeframe: 2012-2015
+  institution:
+    name: ENSIMAG, Grenoble, FR
+    url: "#"
+    logo: images/education/ensimag.png # Path of the logo image
+  customSections: #(optional)
+  - name: Specializations
+    content: Applied mathematics & Computer Science
+
+
+- name: M.Sc. Applied Mathematics   MSIAM (Master of Science in Industrial and Applied Mathematics)
+  icon: fa-infinity
+  timeframe: 2014-2015
+  institution:
+    name: UGA, Grenoble, FR
+    url: "#"
+    logo: images/education/uga.png # Path of the logo image
+  customSections: #(optional)
+  - name: Major
+    content: Complex optimisation, advanced imaging, optimal transport, wavelets.

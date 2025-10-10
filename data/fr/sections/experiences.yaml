@@ -13,7 +13,7 @@ experiences:
     name: Lifeaz
     url: "https://www.lifeaz.co"
     location: Paris
-    logo: /images/experiences/company.png
+    logo: images/experiences/lifeaz.png
     # company overview
     overview: Société de 40 personnes développant un défibrillateur connecté à destination des particuliers.
   positions:
@@ -42,7 +42,7 @@ experiences:
     name: DBV Technologies
     url: "https://dbv-technologies.com/fr/"
     location: Bagneux
-    logo: /images/experiences/company.png
+    logo: images/experiences/dbv.png
     # company overview
     overview: Société de biotechnologies de 250 personnes développant des patchs thérapeutiques anti-allergies alimentaires.
   positions:
@@ -75,7 +75,7 @@ experiences:
     name: Simtec
     url: "https://www.simtecsolution.fr/fr/"
     location: Grenoble
-    logo: /images/experiences/company.png
+    logo: images/experiences/simtec.pngg
     # company overview
     overview: Société de conseil en modélisation de 10 personnes.
   positions:
