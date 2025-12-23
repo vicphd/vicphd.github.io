@@ -10,7 +10,7 @@ const app = document.querySelector('#app')
 
 // Theme Initialization
 const initTheme = () => {
-  const savedTheme = localStorage.getItem('theme') || 'dark';
+  const savedTheme = localStorage.getItem('theme') || 'light';
   document.documentElement.setAttribute('data-theme', savedTheme);
 };
 initTheme();
