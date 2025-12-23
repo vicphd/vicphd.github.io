@@ -1,0 +1,22 @@
+{
+  "name": "perso",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^7.3.0"
+  },
+  "dependencies": {
+    "dompurify": "^3.3.1",
+    "katex": "^0.16.27",
+    "marked": "^17.0.1"
+  }
+}
