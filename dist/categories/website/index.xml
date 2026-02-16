@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Website on VIEW (Vic Innovation Example Website)</title>
+    <link>http://localhost:1313/categories/website/</link>
+    <description>Recent content in Website on VIEW (Vic Innovation Example Website)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 01 Jun 2020 08:06:25 +0600</lastBuildDate><atom:link href="http://localhost:1313/categories/website/index.xml" rel="self" type="application/rss+xml" /><item>
+      <title>Todo list</title>
+      <link>http://localhost:1313/posts/todolist/todolist/</link>
+      <pubDate>Mon, 01 Jun 2020 08:06:25 +0600</pubDate>
+      
+      <guid>http://localhost:1313/posts/todolist/todolist/</guid>
+      <description>&lt;p&gt;Liste des choses à faire sur ce site&lt;/p&gt;
+&lt;h2 id=&#34;configuration&#34;&gt;Configuration&lt;/h2&gt;
+&lt;p&gt;Liens utiles&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://hugo-toha.github.io/posts/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;site exemple&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hugo-toha/hugo-toha.github.io/tree/main/content&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;source du site exemple&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hossainemruz/hossainemruz.github.io/blob/source/content/posts/introduction/index.md?plain=1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;source du site du créateur principal&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://toha-guides.netlify.app/posts/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;doc plus complète&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;à faire :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;comprendre comment faire les hero (images en preview et header de posts) &amp;ndash;&amp;gt; changement en fonction des versions ?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;posts-à-rédiger&#34;&gt;Posts à rédiger&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;spider map (un peu compliqué vu qu&amp;rsquo;il faut configurer le leaflet embeddé)&lt;/li&gt;
+&lt;li&gt;veilleuse baleine :
+&lt;ul&gt;
+&lt;li&gt;photos de l&amp;rsquo;électronique&lt;/li&gt;
+&lt;li&gt;il faudra aussi faire un schéma simplifié ? sur mermaid ou juste ppt&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    
+  </channel>
+</rss>

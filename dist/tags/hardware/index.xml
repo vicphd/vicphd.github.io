@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hardware on VIEW (Vic Innovation Example Website)</title>
+    <link>http://localhost:1313/tags/hardware/</link>
+    <description>Recent content in Hardware on VIEW (Vic Innovation Example Website)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 08 Jun 2020 08:06:25 +0600</lastBuildDate><atom:link href="http://localhost:1313/tags/hardware/index.xml" rel="self" type="application/rss+xml" /><item>
+      <title>Veilleuse baleine</title>
+      <link>http://localhost:1313/posts/perso/veilleuse/</link>
+      <pubDate>Mon, 08 Jun 2020 08:06:25 +0600</pubDate>
+      
+      <guid>http://localhost:1313/posts/perso/veilleuse/</guid>
+      <description>&lt;p&gt;pimper la veilleuse baleine&lt;/p&gt;
+&lt;h2 id=&#34;contexte&#34;&gt;Contexte&lt;/h2&gt;
+&lt;p&gt;abc&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;b&lt;/li&gt;
+&lt;li&gt;c&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;</description>
+    </item>
+    
+    
+  </channel>
+</rss>

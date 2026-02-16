@@ -1,4 +1,6 @@
 
+const formatBold = (text) => text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+
 export const renderHero = (data) => `
   <section id="hero" class="hero-section">
     <div class="hero-content">
@@ -16,7 +18,7 @@ export const renderAbout = (data) => `
     <h2 class="section-title"><span>01.</span> ${data.title}</h2>
     <div class="about-content">
       <div class="about-text">
-        ${data.description.split('\n\n').map(p => `<p>${p}</p>`).join('')}
+        ${data.description.split('\n\n').map(p => `<p>${formatBold(p)}</p>`).join('')}
       </div>
     </div>
   </section>
@@ -37,7 +39,7 @@ export const renderExperience = (data) => `
           </div>
           <span class="period">${item.period}</span>
           <div class="description">
-            ${item.description.split('\n\n').map(p => `<p>${p.replace(/\n/g, '<br>')}</p>`).join('')}
+            ${item.description.split('\n\n').map(p => `<p>${formatBold(p.replace(/\n/g, '<br>'))}</p>`).join('')}
           </div>
         </div>
       `).join('')}
@@ -59,12 +61,13 @@ export const renderEducation = (data) => `
              </div>
           </div>
           <span class="period">${item.period}</span>
-          <p class="description">${item.description}</p>
+          <p class="description">${formatBold(item.description)}</p>
         </div>
       `).join('')}
     </div>
   </section>
 `;
+
 
 export const renderSkills = (data) => `
   <section id="skills" class="section">
